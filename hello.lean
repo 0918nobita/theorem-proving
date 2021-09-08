@@ -15,3 +15,9 @@ def fact : Nat → Nat
 #eval List.map (fun x => toString x) [1, 2, 3]
 
 #eval [4, 5, 6].map toString
+
+theorem ex1 : p ∨ q → q ∨ p := by
+  intro h
+  cases h with
+  | Or.inl h1 => apply Or.inr; exact h1
+  | Or.inr h2 => apply Or.inl; exact h2
