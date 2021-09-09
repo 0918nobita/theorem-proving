@@ -43,3 +43,8 @@ def sampleFunction1 x := x * x + 3
 def result1 := sampleFunction1 5
 -- {} 内の値は toString 多相関数を用いて文字列に変換され、埋め込まれて出力される
 #eval println! "The result of squaring the integer 5 and adding 3 is {result1}"
+
+-- 必要なら、仮引数の型を指定することができる
+def sampleFunction2 (x : Nat) := 2 * x - 3
+def result2 := sampleFunction2 7
+#eval println! "The result of applying the 2nd sample function to 7 is {result2}"
