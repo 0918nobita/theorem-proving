@@ -38,3 +38,8 @@ theorem ex1 : p ∨ q → q ∨ p := by
 -- 名前空間はものをグループ化する主要な方法である。
 -- 関数は def コマンドを用いて定義される。
 -- def コマンドは関数に名前を与え、その引数を定義する
+
+def sampleFunction1 x := x * x + 3
+def result1 := sampleFunction1 5
+-- {} 内の値は toString 多相関数を用いて文字列に変換され、埋め込まれて出力される
+#eval println! "The result of squaring the integer 5 and adding 3 is {result1}"
