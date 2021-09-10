@@ -1,3 +1,6 @@
+Require Extraction.
+Extract Inductive nat => int [ "0" "Stdlib.succ" ] "(fun f0 fS n -> if n = 0 then f0 () else fS (n - 1))".
+
 Require Import Arith.
 From mathcomp Require Import ssreflect.
 
@@ -29,6 +32,9 @@ Proof.
 Qed.
 
 Definition f x := x + 100.
+
+Extraction "f.ml" f.
+
 Definition g x := x - 100.
 
 Theorem g_f : forall x, g (f x) = x.
