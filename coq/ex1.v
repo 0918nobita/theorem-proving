@@ -1,6 +1,8 @@
 Require Import Arith.
 From mathcomp Require Import ssreflect.
 
+Require Import MyExtraction.
+
 (* Section コマンド : スクリプトにセクションを導入する *)
 Section ModusPonens.
   (* Variables コマンド : 変数宣言 *)
@@ -41,6 +43,4 @@ Module Bar.
   Qed.
 End Bar.
 
-Require Extraction.
-Extract Inductive nat => int [ "0" "Stdlib.succ" ] "(fun f0 fS n -> if n = 0 then f0 () else fS (n - 1))".
 Extraction "foo.ml" Bar.
