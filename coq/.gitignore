@@ -1,5 +1,12 @@
+*.aux
+*.glob
+*.vo
+*.vos
+*.vok
+
 *.ml
 *.mli
+
 *.cmi
 *.cmo
 *.cmx
