@@ -1,2 +1,7 @@
 *.ml
 *.mli
+*.cmi
+*.cmo
+*.cmx
+*.o
+a.out
