@@ -1,4 +1,4 @@
-Require Import Arith.
+From Coq Require Import Arith.
 From mathcomp Require Import ssreflect.
 
 Require Import MyExtraction.
