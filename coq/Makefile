@@ -1,4 +1,4 @@
-all: day.vo day.cmo ex1.vo foo.cmo lexical_analysis.vo lex.cmo
+all: day.vo day.cmo ex1.vo foo.cmo lexical_analysis.vo lex.cmo parser.mli parser.ml
 
 day.vo day.mli day.ml: day.v
 	coqc day.v
@@ -20,6 +20,9 @@ lexical_analysis.vo lex.mli lex.ml: MyExtraction.vo lexical_analysis.v
 
 lex.cmo: lex.mli lex.ml
 	ocamlc lex.mli lex.ml
+
+parser.vo parser.mli parser.ml: MyExtraction.vo parser.v
+	coqc parser.v
 
 .PHONY: doc
 doc:
